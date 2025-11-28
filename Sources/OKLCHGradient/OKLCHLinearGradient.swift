@@ -1,5 +1,7 @@
 import SwiftUI
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public struct OKLCHLinearGradient: ShapeStyle, View, Sendable {
     let stops: [Gradient.Stop]
     let startPoint: UnitPoint
@@ -34,6 +36,8 @@ public struct OKLCHLinearGradient: ShapeStyle, View, Sendable {
     }
 }
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public extension ShapeStyle where Self == OKLCHLinearGradient {
     static func oklchLinearGradient(_ gradient: Gradient, startPoint: UnitPoint, endPoint: UnitPoint) -> OKLCHLinearGradient {
         OKLCHLinearGradient(gradient: gradient, startPoint: startPoint, endPoint: endPoint)

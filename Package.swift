@@ -4,7 +4,8 @@ import PackageDescription
 
 let package = Package(
     name: "OKLCHGradient",
-    platforms: [.iOS(.v17), .macOS(.v14), .tvOS(.v17), .visionOS(.v1)],
+    // Minimum versions that support [[ stitchable ]] in Metal:
+    platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .visionOS(.v1), .watchOS(.v6)],
     products: [.library(name: "OKLCHGradient", targets: ["OKLCHGradient"])],
     targets: [
         .target(

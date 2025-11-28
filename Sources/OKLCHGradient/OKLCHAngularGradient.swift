@@ -1,5 +1,7 @@
 import SwiftUI
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public struct OKLCHAngularGradient: ShapeStyle, View, Sendable {
     let stops: [Gradient.Stop]
     let center: UnitPoint
@@ -60,6 +62,8 @@ public struct OKLCHAngularGradient: ShapeStyle, View, Sendable {
     }
 }
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public extension ShapeStyle where Self == OKLCHAngularGradient {
     static func oklchAngularGradient(_ gradient: Gradient, center: UnitPoint, startAngle: Angle, endAngle: Angle) -> OKLCHAngularGradient {
         OKLCHAngularGradient(gradient: gradient, center: center, startAngle: startAngle, endAngle: endAngle)
@@ -74,6 +78,8 @@ public extension ShapeStyle where Self == OKLCHAngularGradient {
     }
 }
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public extension ShapeStyle where Self == OKLCHAngularGradient {
     static func oklchConicGradient(_ gradient: Gradient, center: UnitPoint, angle: Angle = .zero) -> OKLCHAngularGradient {
         OKLCHAngularGradient(gradient: gradient, center: center, angle: angle)

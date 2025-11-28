@@ -1,5 +1,7 @@
 import SwiftUI
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public struct OKLCHEllipticalGradient: ShapeStyle, View, Sendable {
     let stops: [Gradient.Stop]
     let center: UnitPoint
@@ -39,6 +41,8 @@ public struct OKLCHEllipticalGradient: ShapeStyle, View, Sendable {
     }
 }
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public extension ShapeStyle where Self == OKLCHEllipticalGradient {
     static func oklchEllipticalGradient(_ gradient: Gradient, center: UnitPoint = .center, startRadiusFraction: CGFloat = 0, endRadiusFraction: CGFloat = 0.5) -> OKLCHEllipticalGradient {
         OKLCHEllipticalGradient(gradient: gradient, center: center, startRadiusFraction: startRadiusFraction, endRadiusFraction: endRadiusFraction)

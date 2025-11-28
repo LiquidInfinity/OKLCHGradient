@@ -1,5 +1,7 @@
 import SwiftUI
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public struct OKLCHRadialGradient: ShapeStyle, View, Sendable {
     let stops: [Gradient.Stop]
     let center: UnitPoint
@@ -39,6 +41,8 @@ public struct OKLCHRadialGradient: ShapeStyle, View, Sendable {
     }
 }
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(watchOS, unavailable)
 public extension ShapeStyle where Self == OKLCHRadialGradient {
     static func oklchRadialGradient(_ gradient: Gradient, center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat) -> OKLCHRadialGradient {
         OKLCHRadialGradient(gradient: gradient, center: center, startRadius: startRadius, endRadius: endRadius)
